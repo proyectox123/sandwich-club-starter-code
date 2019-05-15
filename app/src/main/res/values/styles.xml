@@ -8,4 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SandwichDetailContentStyle">
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="SandwichDetailTitleStyle">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SandwichDetailBodyStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

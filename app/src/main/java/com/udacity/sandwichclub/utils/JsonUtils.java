@@ -37,8 +37,8 @@ public class JsonUtils {
     }
 
     private static List<String> parseAlsoKnownAsList(JSONObject nameJSON) throws JSONException{
-        JSONArray alsoKnownAsJSON = nameJSON.getJSONArray("alsoKnownAs");
         List<String> alsoKnownAs = new ArrayList<>();
+        JSONArray alsoKnownAsJSON = nameJSON.getJSONArray("alsoKnownAs");
         if (alsoKnownAsJSON != null) {
             for (int i=0; i<alsoKnownAsJSON.length(); i++){
                 alsoKnownAs.add(alsoKnownAsJSON.getString(i));
@@ -49,8 +49,8 @@ public class JsonUtils {
     }
 
     private static List<String> parseIngredientList(JSONObject sandwichJSON) throws JSONException{
-        JSONArray ingredientsJSON = sandwichJSON.getJSONArray("ingredients");
         List<String> ingredients = new ArrayList<>();
+        JSONArray ingredientsJSON = sandwichJSON.getJSONArray("ingredients");
         if (ingredientsJSON != null) {
             for (int i=0; i<ingredientsJSON.length(); i++){
                 ingredients.add(ingredientsJSON.getString(i));
