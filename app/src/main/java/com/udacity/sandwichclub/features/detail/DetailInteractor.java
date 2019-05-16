@@ -84,7 +84,11 @@ public class DetailInteractor implements DetailNavigator.Interactor {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             return Html.fromHtml(label, Html.FROM_HTML_MODE_LEGACY);
         }else{
-            return Html.fromHtml(label);
+            return getSpannedLabelPreNougat(label);
         }
+    }
+
+    private Spanned getSpannedLabelPreNougat(String label){
+        return Html.fromHtml(label);
     }
 }

@@ -33,7 +33,16 @@ public class DetailActivity extends AppCompatActivity implements DetailNavigator
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        initView();
+        ingredientsIv = findViewById(R.id.image_iv);
+        alsoKnownTv = findViewById(R.id.also_known_tv);
+        originTv = findViewById(R.id.origin_tv);
+        descriptionTv = findViewById(R.id.description_tv);
+        ingredientsTv = findViewById(R.id.ingredients_tv);
+        nameContentV = findViewById(R.id.name_content);
+        originContentV = findViewById(R.id.origin_content);
+        descriptionContentV = findViewById(R.id.description_content);
+        ingredientsContentV = findViewById(R.id.ingredients_content);
+
         initData();
     }
 
@@ -52,6 +61,8 @@ public class DetailActivity extends AppCompatActivity implements DetailNavigator
     public void loadSandwichImage(String image) {
         Picasso.with(this)
                 .load(image)
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.ic_launcher)
                 .into(ingredientsIv);
     }
 
@@ -95,18 +106,6 @@ public class DetailActivity extends AppCompatActivity implements DetailNavigator
     public void loadSandwichDescription(String description) {
         descriptionContentV.setVisibility(View.VISIBLE);
         descriptionTv.setText(description);
-    }
-
-    private void initView(){
-        ingredientsIv = findViewById(R.id.image_iv);
-        alsoKnownTv = findViewById(R.id.also_known_tv);
-        originTv = findViewById(R.id.origin_tv);
-        descriptionTv = findViewById(R.id.description_tv);
-        ingredientsTv = findViewById(R.id.ingredients_tv);
-        nameContentV = findViewById(R.id.name_content);
-        originContentV = findViewById(R.id.origin_content);
-        descriptionContentV = findViewById(R.id.description_content);
-        ingredientsContentV = findViewById(R.id.ingredients_content);
     }
 
     private void initData(){
